@@ -4,7 +4,7 @@ let myCar = {
     model: "F94",
     color: "BLACK",
     date: "2016",
-    horsepower: "ყველა",
+    horsepower: "400",
     price: "18000$",
 }
 
@@ -14,7 +14,7 @@ let myCar2 = {
     model: "G",
     color: "BLACK",
     date: "2015",
-    horsepower: "ყველა",
+    horsepower: "320",
     price: "13000$",
 }
 
@@ -24,7 +24,7 @@ let myCar3 = {
     model: "TT",
     color: "GREY",
     date: "2018",
-    horsepower: "ყველა",
+    horsepower: "280",
     price: "9000$",
 }
 
@@ -34,7 +34,7 @@ let myCar4 = {
     model: "PRADO",
     color: "white",
     date: "2013",
-    horsepower: "ყველა",
+    horsepower: "240",
     price: "12000$",
 }
 
@@ -60,7 +60,7 @@ function findCarById(carid){
 }
 
 function getDescription(myCar){
-    return  `ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${myCar.car}, \n color: ${myCar.color}, \n model: ${myCar.model}, \n date: ${myCar.date}, \n horsePower: ${myCar.horsePower}, \n price: ${myCar.price}`
+    return  `ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${myCar.car}, \n color: ${myCar.color}, \n model: ${myCar.model}, \n date: ${myCar.date}, \n horsePower: ${myCar.horsepower}, \n price: ${myCar.price}`
 }
 
 
