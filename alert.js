@@ -61,8 +61,7 @@ function findCarById(carid){
 
 function getDescription(myCar){
     return  `ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${myCar.car}, \n color: ${myCar.color}, \n model: ${myCar.model}, \n date: ${myCar.date}, \n horsePower: ${myCar.horsePower}, \n price: ${myCar.price}`
-    }
-
+}
 
 
 // function getDescription(myCar){
