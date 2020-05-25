@@ -5,7 +5,7 @@ let myCar = {
     color: "BLACK",
     date: "2016",
     horsepower: "400",
-    price: "18000$",
+    price: "20000",
 }
 
 let myCar2 = {
@@ -15,7 +15,7 @@ let myCar2 = {
     color: "BLACK",
     date: "2015",
     horsepower: "320",
-    price: "13000$",
+    price: "15000",
 }
 
 let myCar3 = {
@@ -25,7 +25,7 @@ let myCar3 = {
     color: "GREY",
     date: "2018",
     horsepower: "280",
-    price: "9000$",
+    price: "10000",
 }
 
 let myCar4 = {
@@ -35,7 +35,7 @@ let myCar4 = {
     color: "white",
     date: "2013",
     horsepower: "240",
-    price: "12000$",
+    price: "5000",
 }
 
 let loveCar = []
@@ -63,12 +63,23 @@ function getDescription(myCar){
     return  `ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${myCar.car}, \n color: ${myCar.color}, \n model: ${myCar.model}, \n date: ${myCar.date}, \n horsePower: ${myCar.horsepower}, \n price: ${myCar.price}`
 }
 
+function giveAlert(){
+    let input = parseInt(document.querySelector('#search').value);
+    let stringInput = input.toString();
+    let searchedloveCar = [];
+    if(stringInput === "NaN"){
+        alert(`გთხოვთ შეიყვანოთ ფასი სწორ ფორმატში.`);
+    }else{
+        for(let i = 0; i < loveCar.length; i++){
+            if(input >= loveCar[i].price ){
+                searchedloveCar.push(`\n \n ამ ${input} ფასად შეგიძლიათ შეიძინოთ: \n სახელი: ${loveCar[i].car}, \n მოდელი: ${loveCar[i].model}, \n ფასი: ${loveCar[i].price}$`);
+            }
+        }
+        if(searchedloveCar.length > 0){
+            alert(searchedloveCar);
+        }else{
+             alert(`სამუხაროდ ამ ფასში მანქანა ვერ მოიძებნა`);
+        }
+    }
+}
 
-// function getDescription(myCar){
-//     return  "ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: BMW \n color: შავი \n model: F94 \n date: 2019 \n horsePower: ყველა \n price: 6000$"
-// }
-
-
-// function getDescription(myCar){
-//     return  ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${myCar.mark}, \n color: ${myCar.color}, \n model: ${myCar.model}, \n date: ${myCar.year}, \n horsePower: ${myCar.horsePower}, \n price: ${myCar.price} $
-// }
