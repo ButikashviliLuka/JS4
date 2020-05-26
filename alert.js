@@ -84,7 +84,7 @@ function giveAlert(){
         }
     }
 }
-
+  
 function disableExpenciveCars(price, loveCar) {
     let expenciveCars =[]
     for(let i = 0; i < loveCar.length; i++) {
