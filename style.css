@@ -49,7 +49,7 @@
     border-radius: 50px;
 }
 
-.button {
+.button2 {
     margin-top: 10px;
     margin-left: 60px;
     height: 30px;
@@ -60,6 +60,6 @@
     border: 2px solid grey;
 }
 
-.button:hover {
-    color: red;
+.button2:hover {
+    color: black;
 }

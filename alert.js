@@ -70,6 +70,8 @@ function giveAlert(){
     if(stringInput === "NaN"){
         alert(`გთხოვთ შეიყვანოთ ფასი სწორ ფორმატში.`);
     }else{
+        searchedloveCar = [];
+        disableExpenciveCars(input, loveCar);
         for(let i = 0; i < loveCar.length; i++){
             if(input >= loveCar[i].price ){
                 searchedloveCar.push(`\n \n ამ ${input} ფასად შეგიძლიათ შეიძინოთ: \n სახელი: ${loveCar[i].car}, \n მოდელი: ${loveCar[i].model}, \n ფასი: ${loveCar[i].price}$`);
@@ -83,3 +85,16 @@ function giveAlert(){
     }
 }
 
+function disableExpenciveCars(price, loveCar) {
+    let expenciveCars =[]
+    for(let i = 0; i < loveCar.length; i++) {
+        if(loveCar[i].price > price) {
+            expenciveCars.push(loveCar[i]);
+        }
+
+    for(let i = 0; i < expenciveCars.length; i++) {   
+       let currentElement  = document.getElementById(expenciveCars[i].id);
+       currentElement.querySelector(".button2").setAttribute("disabled", true);
+    }
+}
+}
