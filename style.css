@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .container {
     max-width: 1080px;
     width: 100%;
@@ -11,7 +15,7 @@
 
 .search {
     height: 30px;
-    border: 2px solid black;
+    border: 2px solid grey;
     border-radius: 10px;
 }
 
@@ -23,7 +27,7 @@
 .clicker{
     width: 120px;
     height: 30px;
-    border: 2px solid black;
+    border: 2px solid grey;
     background-color: black;
     color: white;
     border-radius: 10px;
@@ -32,8 +36,9 @@
 
 .clicker:hover {
     border: none;
-    background-color: gry;
-    color: red;
+    background-color: grey;
+    color: white;
+    border: 2px solid grey;
     font-family: 'Balsamiq Sans', cursive;
 }
 
@@ -47,6 +52,7 @@
     width: 450px;
     border: 1px solid;
     border-radius: 50px;
+    border: 1px solid red;
 }
 
 .button2 {
