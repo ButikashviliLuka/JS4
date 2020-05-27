@@ -1,11 +1,11 @@
 let myCar = {
     id: "bmw",
-    car: "BMW",
+    car: "bmw",
     model: "F94",
     color: "BLACK",
     date: "2016",
     horsepower: "400",
-    price: 20000,
+    price: 11000
 }
 
 let myCar2 = {
@@ -15,7 +15,7 @@ let myCar2 = {
     color: "BLACK",
     date: "2015",
     horsepower: "320",
-    price: 15000,
+    price: 18000
 }
 
 let myCar3 = {
@@ -25,7 +25,7 @@ let myCar3 = {
     color: "GREY",
     date: "2018",
     horsepower: "280",
-    price: 10000,
+    price: 10000
 }
 
 let myCar4 = {
@@ -35,7 +35,7 @@ let myCar4 = {
     color: "white",
     date: "2013",
     horsepower: "240",
-    price: 5000,
+    price: 5000
 }
 
 let loveCar = []
@@ -106,40 +106,84 @@ function disableExpenciveCars(price, loveCar) {
     }
 }
 
+let maxprice = 0;
+
 // EDZEBS YVELAZE DZVIR MANQANAS
 function searchMostExpensiveCar(){
-    let max = 0;
     let count = 1;
     for(let i = 0; i<loveCar.length;i++){
-        count++;
-        if(max < loveCar[i].price){
-            max = loveCar[i];
-        } 
+        count++;//aketebs tvlas rata daabrunos max=is mxolod bolos migebuli mnishvneloba
+
+        if(maxprice < loveCar[i].price){
+            max = loveCar[i];//anichebs yvelaze dzviriani manqanis obieqts max-s
+            maxprice = loveCar[i].price;//anichebs fas cvlads rata sheadaros momdevno manqanis fasebs
+        }
         if(count===loveCar.length){
             return max;
-            console.log(max);
         }
-
-
+        
     }
 }
 
-console.log(searchMostExpensiveCar() );
 
-function disable(){
-  var SelectAllcars = document.querySelector(".car");
-  console.log(SelectAllcars.length);
-  for(let i = 0; i < SelectAllcars.length; i++){
-      alert("asd");
-  }
-  SelectAllcars.style.display = "none";
+
+//Gilakis dacherisas amoqmdebs funqcias romelic tovebs mxolod yvelaze dzvirian manqanas
+function displayMostExpensiveCar(){
+    let mostexpensivecar = searchMostExpensiveCar().id;
+        for(i = 0; i < loveCar.length; i++){
+            let SelectAllCars = document.getElementById(loveCar[i].id);
+            SelectAllCars.style.display = "none";
+            if(mostexpensivecar === SelectAllCars.id){
+                SelectAllCars.style.display = "block";
+            }
+            
+        }
+}
+// disable();
+
+
+
+
+// EDZEBS YVELAZE Iafasian MANQANAS
+
+function searchCheapestCar(){
+    let count = 0;
+    //shemogvaqvs yvelaze dzviriani manqana rom masze iafiani manqanebis Shedareba
+    let minprice = searchMostExpensiveCar().price;
+    for(let i = 0; i<loveCar.length;i++){
+        
+        count++;//aketebs tvlas rata daabrunos min=is mxolod bolos migebuli mnishvneloba
+        if(minprice > loveCar[i].price){
+            min = loveCar[i];//anichebs yvelaze dzviriani manqanis obieqts max-s
+            minprice = loveCar[i].price;//anichebs fas cvlads rata sheadaros momdevno manqanis fasebs);
+        }
+        if(count===loveCar.length){
+            return min;
+        }
+        
+    }
 }
 
-//
-/*function searchinput(){
-  let inputedprice = document.forms["priceform"]["priceinput"].value;
-
-  alert(inputedprice);
+//GAMOAQVS YVELAZE IAFASIANI MANQANA
+function displayCheapestCar(){
+    let cheapestcar = searchCheapestCar().id;
+    for(i = 0; i < loveCar.length; i++){
+        let SelectAllCars = document.getElementById(loveCar[i].id);
+        SelectAllCars.style.display = "none";
+        if(cheapestcar === SelectAllCars.id){
+            SelectAllCars.style.display = "block";
+        }
+        
+    }
 }
-*/
 
+
+//Gamoaqvs yvela manqana
+function cancel(){
+    for(i = 0; i < loveCar.length; i++){
+        let SelectAllCars = document.getElementById(loveCar[i].id);
+        SelectAllCars.style.display = "block";
+
+        
+    }
+}
