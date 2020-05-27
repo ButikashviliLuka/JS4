@@ -10,25 +10,29 @@
 </head>
 <body>
 <div class="container">
-    <div class="searching">
-        <input class="search"type="search" id="search" name="search" placeholder="შეიყვანეთ ფასი">
-        <button class="clicker "type="button" id="button" onclick="giveAlert()">შემოწმება</button>
-    </div>
+<form class="searching" method="POST" name="priceform" onsubmit="return giveAlert()">
+    <input class="search" type="search" id="search"name="priceinput" name="search"placeholder="შეიყვანეთ ფასი">
+    <button class="clicker "type="button" id="button" onclick="displayCheapest()">ყველაზე იაფი</button>
+    <button class="clicker "type="button" id="button" onclick="searchMostExpensiveCar()">ყველაზე ძვირი</button>
+    <button class="clicker "type="button" id="button" onclick="disable()">asd ძვირი</button>
+    <input type="submit" class="clicker" value="ძებნა" name="submit">
+</form>
+
 </div>
 <div class="photos">
-    <div id="bmw" class="car1" onclick="displayDescription(this.id)">
+    <div id="bmw" class="car" onclick="displayDescription(this.id)">
         <img class="images" src="images/bmw.jpg">
         <button class="button2">Information</button>
     </div>
-    <div id="mercedes" class="car2" onclick="displayDescription(this.id)">
+    <div id="mercedes" class="car" onclick="displayDescription(this.id)">
         <img class="images" src="images/mercedes.jpg">
         <button class="button2">Information</button>
     </div>
-    <div id="audi" class="car3" onclick="displayDescription(this.id)">
+    <div id="audi" class="car" onclick="displayDescription(this.id)">
         <img class="images" src="images/audi.jpg">
         <button class="button2">Information</button>
     </div>
-    <div id="toyota" class="car4" onclick="displayDescription(this.id)">
+    <div id="toyota" class="car" onclick="displayDescription(this.id)">
         <img class="images" src="images/toyota.jpg">
         <button class="button2">Information</button>
     </div>

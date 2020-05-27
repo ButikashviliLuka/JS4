@@ -55,9 +55,10 @@ body {
     border: 1px solid red;
 }
 
+
+
 .button2 {
     margin-top: 10px;
-    margin-left: 60px;
     height: 30px;
     width: 300px;
     font-size: 22px;
@@ -68,4 +69,16 @@ body {
 
 .button2:hover {
     color: red;
+}
+
+
+
+.photos img {
+    width: 100%;
+    height: 200px;
+}
+
+.photos div {
+    margin: 20px;
+    width: 300px;
 }
