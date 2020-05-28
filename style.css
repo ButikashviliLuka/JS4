@@ -1,6 +1,12 @@
 body {
     background-color: black;
 }
+p{
+    color: white;
+    margin-left: 50%;
+    transform: translate(-25%);
+    margin-bottom: 15px;
+}
 
 .container {
     max-width: 1080px;

@@ -187,3 +187,21 @@ function cancel(){
         
     }
 }
+
+//Gamoaqvs sashualo pasi
+
+function getAlertAboutAveragePrice() {
+    let totalPrice;
+    for (let i = 0; i < loveCar.length; i++) {
+        totalPrice =+ loveCar[i].price;
+        
+    }
+    alert(`მანქანების საშუალო ღირებულება არის: ${totalPrice/loveCar.length}`);
+}
+
+// Image Title
+
+for(let i = 0; i < loveCar.length; i++){
+    let imageTitle = document.getElementById(loveCar[i].id);
+    imageTitle.querySelector('p').innerHTML = `${loveCar[i].car} | ${loveCar[i].model}`;
+}
