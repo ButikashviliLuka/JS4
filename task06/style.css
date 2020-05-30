@@ -1,0 +1,33 @@
+body{
+  padding-top: 50px;
+}
+.d-none{
+  display: none;
+}
+.username{
+  float: left;
+  border: 2px solid black;
+  height: 25px;
+  margin-right: 20px;
+}
+.valid{
+  border: 2px solid black;
+  border-right: 0px;
+  height: 25px;
+  float: left;
+}
+.password-icon{
+  float: left;
+  border: 2px solid black;
+  height: 25px;
+  width: 24px;
+  border-left: 0px;
+}
+.login-button{
+  float: left;
+}
+.devider{
+  content: '';
+  clear: both;
+  display: block;
+}
