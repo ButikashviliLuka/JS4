@@ -1,11 +1,21 @@
 body {
-    background-color: black;
+    background-color: #000;
 }
 p{
     color: white;
     margin-left: 50%;
     transform: translate(-25%);
     margin-bottom: 15px;
+}
+
+
+.loginlink{
+    color:#fff;
+    position: absolute;
+    right: 5%;
+    padding: 3px 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
 }
 
 .container {

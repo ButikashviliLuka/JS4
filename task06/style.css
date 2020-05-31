@@ -1,6 +1,9 @@
 body{
   padding-top: 50px;
 }
+
+
+
 .d-none{
   display: none;
 }
@@ -40,4 +43,8 @@ form{
   content: '';
   clear: both;
   display: block;
+}
+
+.directtologin {
+  color: #fff!important;
 }
