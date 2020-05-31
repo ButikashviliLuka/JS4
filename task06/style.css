@@ -4,17 +4,25 @@ body{
 .d-none{
   display: none;
 }
+
+form{
+  margin: auto;
+  display: table;
+}
+
 .username{
   float: left;
   border: 2px solid black;
   height: 25px;
   margin-right: 20px;
+  padding:10px 5px;
 }
 .valid{
   border: 2px solid black;
   border-right: 0px;
   height: 25px;
   float: left;
+  padding:10px 5px;
 }
 .password-icon{
   float: left;
@@ -25,6 +33,8 @@ body{
 }
 .login-button{
   float: left;
+  padding: 5px 10px;
+  border-radius: 15px;
 }
 .devider{
   content: '';
