@@ -32,8 +32,10 @@ function logIn(currentUsername, currentPassword){
             correctUsername.push(users[i].username);
             if(currentPassword === users[i].password && currentPassword.length > 8){
                 alert('შეხვედით სისტემაში წარმატებით');
+                window.location.href = "index.html";
             } else if (currentPassword === users[i].password && currentPassword.length < 8) {
                 alert('შეხვედით სისტემაში წარმატეით, თუმცა გთხოვთ შეცვალოთ პაროლი');
+                window.location.href = "index.html";
             } else{
                 alert('პაროლი არასწორია');
             }
@@ -57,9 +59,9 @@ function showThePassword(){
     let eyeSlash = document.getElementById('eye-slash');
     if(password.type === "password"){
         password.type = "text";
-        eyeSlash.src = "images/eye-regular.svg";
+        eyeSlash.src = "images/eye-slash-regular.svg";
     } else{
         password.type = "password";
-        eyeSlash.src = "images/eye-slash-regular.svg";
+        eyeSlash.src = "images/eye-regular.svg";
     }
 }
