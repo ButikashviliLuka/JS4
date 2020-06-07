@@ -1,49 +1,3 @@
-// let myCar = {
-//     id: "bmw",
-//     car: "bmw",
-//     model: "F94",
-//     color: "BLACK",
-//     date: "2016",
-//     horsepower: "400",
-//     price: 11000
-// }
-
-// let myCar2 = {
-//     id: "mercedes",
-//     car: "MERCEDES",
-//     model: "G",
-//     color: "BLACK",
-//     date: "2015",
-//     horsepower: "320",
-//     price: 18000
-// }
-
-// let myCar3 = {
-//     id: "audi",
-//     car: "AUDI",
-//     model: "TT",
-//     color: "GREY",
-//     date: "2018",
-//     horsepower: "280",
-//     price: 10000
-// }
-
-// let myCar4 = {
-//     id: "toyota",
-//     car: "TOYOTA",
-//     model: "PRADO",
-//     color: "white",
-//     date: "2013",
-//     horsepower: "240",
-//     price: 5000
-// }
-
-// let loveCar = []
-
-// loveCar.push(myCar);
-// loveCar.push(myCar2);
-// loveCar.push(myCar3);
-// loveCar.push(myCar4);
 
 function Car ( id, car, model, color, date, horsepower, price ) {
     let loveCar = [];
@@ -54,6 +8,9 @@ function Car ( id, car, model, color, date, horsepower, price ) {
     loveCar.date = date;
     loveCar.horsepower = horsepower;
     loveCar.price = price;
+    loveCar.Description = function(){
+        alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
+    };
     return loveCar;
   }
   
@@ -64,27 +21,13 @@ function Car ( id, car, model, color, date, horsepower, price ) {
   
   let loveCar = [myCar, myCar2, myCar3, myCar4];
 
-//gamoaqvs informacia manqanaze gilakis daklikvisas
-function displayDescription(carid){
-    let foundCar = findCarById(carid);
-    let description = getDescription(foundCar);
-    alert(description);
-}
-
-
-//edzebs manqanis monacemebs mocemuli id-is mixedvit
-function findCarById(carid){
-   for(i=0; i<loveCar.length; i++) {
-       if(loveCar[i].id === carid) {
-           return loveCar[i];
-       }
-   }
-}
-
-//aformatebs da ekranze gamoaqvs agebuli infromaciebi
-function getDescription(myCar){
-    return  `ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${myCar.car}, \n color: ${myCar.color}, \n model: ${myCar.model}, \n date: ${myCar.date}, \n horsePower: ${myCar.horsepower}, \n price: ${myCar.price}`
-}
+  function displayDescription (carid) {
+    for ( i=0; i < loveCar.length; i++ ) {
+      if ( loveCar[i].id === carid ) {
+        loveCar[i].Description();
+      }
+    }
+  }
 
 function giveAlert(){
     let input = parseInt(document.querySelector('#search').value);
