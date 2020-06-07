@@ -4,7 +4,7 @@ const CarMethods ={
     }
   }
 function Car ( id, car, model, color, date, horsepower, price ) {
-    let loveCar = [];
+    let loveCar = Object.create(CarMethods);
     loveCar.id = id;
     loveCar.car = car;
     loveCar.model = model;
@@ -12,7 +12,6 @@ function Car ( id, car, model, color, date, horsepower, price ) {
     loveCar.date = date;
     loveCar.horsepower = horsepower;
     loveCar.price = price;
-    loveCar.description = CarMethods.description;
     return loveCar;
   }
   
