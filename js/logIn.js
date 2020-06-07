@@ -3,17 +3,15 @@
 
 
 function User ( username, password ) {
-    let user = {};
-    user.username = username;
-    user.password = password;
-    return user;
+    this.username = username;
+    this.password = password;
   }
   
-  let user1 = User ( "Luka", "11223333333333");
-  let user2 = User ( "Gela", "123NP!");
-  let user3 = User ( "Saba", "NoMames");
-  let user4 = User ( "Giorgi", "1122Gerogia");
-  let user5 = User ( "Nika", "345678912");
+  let user1 = new User ( "Luka", "11223333333333");
+  let user2 = new User ( "Gela", "123NP!");
+  let user3 = new User ( "Saba", "NoMames");
+  let user4 = new User ( "Giorgi", "1122Gerogia");
+  let user5 = new User ( "Nika", "345678912");
   
   let users = [ user1, user2, user3, user4, user5 ];
 

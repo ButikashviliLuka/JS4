@@ -1,22 +1,20 @@
 
 function Car ( id, car, model, color, date, horsepower, price ) {
-    let loveCar = Object.create(Car.prototype);
-    loveCar.id = id;
-    loveCar.car = car;
-    loveCar.model = model;
-    loveCar.color = color;
-    loveCar.date = date;
-    loveCar.horsepower = horsepower;
-    loveCar.price = price;
-    return loveCar;
+    this.id = id;
+    this.car = car;
+    this.model = model;
+    this.color = color;
+    this.date = date;
+    this.horsepower = horsepower;
+    this.price = price;
   }
   Car.prototype.description = function(){
     alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
   };
-  let myCar = Car ( "bmw", "bmw", "F94", "black", "2016", "400", 11000);
-  let myCar2 = Car ( "mercedes", "MERCEDES", "G", "black", "2015", "320", 18000);
-  let myCar3 = Car ( "audi", "AUDI", "TT", "grey", "2018", "280", 10000);
-  let myCar4 = Car ( "toyota", "TOYOTA", "PRADO", "white", "2013", "240", 5000);
+  let myCar = new Car ( "bmw", "bmw", "F94", "black", "2016", "400", 11000);
+  let myCar2 = new Car ( "mercedes", "MERCEDES", "G", "black", "2015", "320", 18000);
+  let myCar3 = new Car ( "audi", "AUDI", "TT", "grey", "2018", "280", 10000);
+  let myCar4 = new Car ( "toyota", "TOYOTA", "PRADO", "white", "2013", "240", 5000);
   
   let loveCar = [myCar, myCar2, myCar3, myCar4];
 
