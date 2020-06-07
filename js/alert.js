@@ -1,4 +1,8 @@
-
+const CarMethods ={
+    description(){
+      alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
+    }
+  }
 function Car ( id, car, model, color, date, horsepower, price ) {
     let loveCar = [];
     loveCar.id = id;
@@ -8,9 +12,7 @@ function Car ( id, car, model, color, date, horsepower, price ) {
     loveCar.date = date;
     loveCar.horsepower = horsepower;
     loveCar.price = price;
-    loveCar.Description = function(){
-        alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
-    };
+    loveCar.description = CarMethods.description;
     return loveCar;
   }
   
@@ -24,7 +26,7 @@ function Car ( id, car, model, color, date, horsepower, price ) {
   function displayDescription (carid) {
     for ( i=0; i < loveCar.length; i++ ) {
       if ( loveCar[i].id === carid ) {
-        loveCar[i].Description();
+        loveCar[i].description();
       }
     }
   }

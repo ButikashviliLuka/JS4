@@ -16,7 +16,6 @@ function User ( username, password ) {
   let user5 = User ( "Nika", "345678912");
   
   let users = [ user1, user2, user3, user4, user5 ];
-  console.log(users);
 
 function logIn(currentUsername, currentPassword){
     let correctUsername= [];
