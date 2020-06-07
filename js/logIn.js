@@ -2,28 +2,21 @@
 
 
 
-let user1 = {
-    username: 'Luka',
-    password: '11223333333333'
-}
-let user2 = {
-    username: 'Gela',
-    password: '123'
-}
-let user3 = {
-    username: 'Saba',
-    password: 'smth'
-}
-let user4 = {
-    username: 'Giorgi',
-    password: '1122'
-}
-let user5 = {
-    username: 'Nika',
-    password: '345678912'
-}
-
-let users = [user1, user2, user3, user4, user5];
+function User ( username, password ) {
+    let user = {};
+    user.username = username;
+    user.password = password;
+    return user;
+  }
+  
+  let user1 = User ( "Luka", "11223333333333");
+  let user2 = User ( "Gela", "123NP!");
+  let user3 = User ( "Saba", "NoMames");
+  let user4 = User ( "Giorgi", "1122Gerogia");
+  let user5 = User ( "Nika", "345678912");
+  
+  let users = [ user1, user2, user3, user4, user5 ];
+  console.log(users);
 
 function logIn(currentUsername, currentPassword){
     let correctUsername= [];

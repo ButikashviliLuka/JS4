@@ -1,50 +1,68 @@
-let myCar = {
-    id: "bmw",
-    car: "bmw",
-    model: "F94",
-    color: "BLACK",
-    date: "2016",
-    horsepower: "400",
-    price: 11000
-}
+// let myCar = {
+//     id: "bmw",
+//     car: "bmw",
+//     model: "F94",
+//     color: "BLACK",
+//     date: "2016",
+//     horsepower: "400",
+//     price: 11000
+// }
 
-let myCar2 = {
-    id: "mercedes",
-    car: "MERCEDES",
-    model: "G",
-    color: "BLACK",
-    date: "2015",
-    horsepower: "320",
-    price: 18000
-}
+// let myCar2 = {
+//     id: "mercedes",
+//     car: "MERCEDES",
+//     model: "G",
+//     color: "BLACK",
+//     date: "2015",
+//     horsepower: "320",
+//     price: 18000
+// }
 
-let myCar3 = {
-    id: "audi",
-    car: "AUDI",
-    model: "TT",
-    color: "GREY",
-    date: "2018",
-    horsepower: "280",
-    price: 10000
-}
+// let myCar3 = {
+//     id: "audi",
+//     car: "AUDI",
+//     model: "TT",
+//     color: "GREY",
+//     date: "2018",
+//     horsepower: "280",
+//     price: 10000
+// }
 
-let myCar4 = {
-    id: "toyota",
-    car: "TOYOTA",
-    model: "PRADO",
-    color: "white",
-    date: "2013",
-    horsepower: "240",
-    price: 5000
-}
+// let myCar4 = {
+//     id: "toyota",
+//     car: "TOYOTA",
+//     model: "PRADO",
+//     color: "white",
+//     date: "2013",
+//     horsepower: "240",
+//     price: 5000
+// }
 
-let loveCar = []
+// let loveCar = []
 
-loveCar.push(myCar);
-loveCar.push(myCar2);
-loveCar.push(myCar3);
-loveCar.push(myCar4);
+// loveCar.push(myCar);
+// loveCar.push(myCar2);
+// loveCar.push(myCar3);
+// loveCar.push(myCar4);
 
+function Car ( id, car, model, color, date, horsepower, price ) {
+    let loveCar = [];
+    loveCar.id = id;
+    loveCar.car = car;
+    loveCar.model = model;
+    loveCar.color = color;
+    loveCar.date = date;
+    loveCar.horsepower = horsepower;
+    loveCar.price = price;
+    return loveCar;
+  }
+  
+  let myCar = Car ( "bmw", "bmw", "F94", "black", "2016", "400", 11000);
+  let myCar2 = Car ( "mercedes", "MERCEDES", "G", "black", "2015", "320", 18000);
+  let myCar3 = Car ( "audi", "AUDI", "TT", "grey", "2018", "280", 10000);
+  let myCar4 = Car ( "toyota", "TOYOTA", "PRADO", "white", "2013", "240", 5000);
+  
+  let loveCar = [myCar, myCar2, myCar3, myCar4];
 
 //gamoaqvs informacia manqanaze gilakis daklikvisas
 function displayDescription(carid){
