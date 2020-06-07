@@ -1,10 +1,6 @@
-const CarMethods ={
-    description(){
-      alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
-    }
-  }
+
 function Car ( id, car, model, color, date, horsepower, price ) {
-    let loveCar = Object.create(CarMethods);
+    let loveCar = Object.create(Car.prototype);
     loveCar.id = id;
     loveCar.car = car;
     loveCar.model = model;
@@ -14,7 +10,9 @@ function Car ( id, car, model, color, date, horsepower, price ) {
     loveCar.price = price;
     return loveCar;
   }
-  
+  Car.prototype.description = function(){
+    alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
+  };
   let myCar = Car ( "bmw", "bmw", "F94", "black", "2016", "400", 11000);
   let myCar2 = Car ( "mercedes", "MERCEDES", "G", "black", "2015", "320", 18000);
   let myCar3 = Car ( "audi", "AUDI", "TT", "grey", "2018", "280", 10000);
