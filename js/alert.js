@@ -1,16 +1,20 @@
 
-function Car ( id, car, model, color, date, horsepower, price ) {
-    this.id = id;
-    this.car = car;
-    this.model = model;
-    this.color = color;
-    this.date = date;
-    this.horsepower = horsepower;
-    this.price = price;
-  }
-  Car.prototype.description = function(){
-    alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
-  };
+
+class Car{
+    constructor( id, car, model, color, date, horsepower, price ) {
+        this.id = id;
+        this.car = car;
+        this.model = model;
+        this.color = color;
+        this.date = date;
+        this.horsepower = horsepower;
+        this.price = price; 
+    }
+    description(){
+        alert(`ამ მანქანას აქვს შენდეგი მახასიათებლები: \n car: ${this.car}, \n color: ${this.color}, \n model: ${this.model}, \n date: ${this.date}, \n horsePower: ${this.horsepower}, \n price: ${this.price}`);
+    }
+}
+
   let myCar = new Car ( "bmw", "bmw", "F94", "black", "2016", "400", 11000);
   let myCar2 = new Car ( "mercedes", "MERCEDES", "G", "black", "2015", "320", 18000);
   let myCar3 = new Car ( "audi", "AUDI", "TT", "grey", "2018", "280", 10000);
@@ -26,23 +30,23 @@ function Car ( id, car, model, color, date, horsepower, price ) {
     }
   }
 
-function giveAlert(){
-    let input = parseInt(document.querySelector('#search').value);
+function giveAlert() {
+    let input = parseInt ( document.querySelector ('#search').value );
     let stringInput = input.toString();
     let searchedloveCar = [];
-    if(stringInput === "NaN"){
-        alert(`გთხოვთ შეიყვანოთ ფასი სწორ ფორმატში.`);
-    }else{
+    if ( stringInput === "NaN" ) {
+        alert (`გთხოვთ შეიყვანოთ ფასი სწორ ფორმატში.`);
+    } else {
         searchedloveCar = [];
-        disableExpenciveCars(input, loveCar);
-        for(let i = 0; i < loveCar.length; i++){
-            if(input >= loveCar[i].price ){
+        disableExpenciveCars (input, loveCar);
+        for ( let i = 0; i < loveCar.length; i++ ) {
+            if ( input >= loveCar[i].price ) {
                 searchedloveCar.push(`\n \n ამ ${input} ფასად შეგიძლიათ შეიძინოთ: \n სახელი: ${loveCar[i].car}, \n მოდელი: ${loveCar[i].model}, \n ფასი: ${loveCar[i].price}$`);
             }
         }
-        if(searchedloveCar.length > 0){
+        if ( searchedloveCar.length > 0 ) {
             alert(searchedloveCar);
-        }else{
+        } else {
              alert(`სამუხაროდ ამ ფასში მანქანა ვერ მოიძებნა`);
         }
     }

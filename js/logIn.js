@@ -1,11 +1,11 @@
 //Task 6 -Login Page
 
-
-
-function User ( username, password ) {
-    this.username = username;
-    this.password = password;
-  }
+class User{
+    constructor( username, password ) {
+        this.username = username;
+        this.password = password; 
+    }
+}
   
   let user1 = new User ( "Luka", "11223333333333");
   let user2 = new User ( "Gela", "123NP!");
